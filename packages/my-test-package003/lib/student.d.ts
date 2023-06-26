@@ -1,5 +1,4 @@
 export declare class Student {
-    get(id: any): {
-        p: string;
-    };
+    _p: number;
+    get p(): number;
 }

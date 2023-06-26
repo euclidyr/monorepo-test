@@ -5,7 +5,8 @@
   "author": "Nonthakit Sivaratanatamrong <NonthakitS@arv.co.th>",
   "homepage": "https://github.com/euclidyr/monorepo-test#readme",
   "license": "ISC",
-  "main": "lib/my-test-package003.js",
+  "main": "lib/student.js",
+  "typings": "lib/student.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,7 +21,8 @@
   "scripts": {
     "test": "node ./__tests__/my-test-package003.test.js",
     "build": "npm run clean && tsc -p tsconfig.json",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "clean": "rm -rf build"
   },
   "bugs": {
     "url": "https://github.com/euclidyr/monorepo-test/issues"
