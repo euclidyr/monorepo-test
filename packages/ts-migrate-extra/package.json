@@ -1,13 +1,13 @@
 {
-  "name": "ts-migrate-extra",
+  "name": "ts-migrate-extraz",
   "version": "0.0.5",
   "description": "A tool for migrating frontend application from JavaScript to TypeScript",
   "directories": {
     "test": "tests"
   },
   "bin": {
-    "ts-migrate-extra": "build/cli.js",
-    "ts-migrate-extra-full": "bin/ts-migrate-extra-full.sh"
+    "ts-migrate-extraz": "build/cli.js",
+    "ts-migrate-extraz-full": "bin/ts-migrate-extraz-full.sh"
   },
   "keywords": [
     "ts-migrate",

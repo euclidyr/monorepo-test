@@ -2,7 +2,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 const { pass, fail } = require("create-jest-runner");
 
-const cli = path.resolve(__dirname, "../../build/ts-migrate-extra.js");
+const cli = path.resolve(__dirname, "../../build/ts-migrate-extraz.js");
 
 module.exports = ({ testPath, config }) => {
   const folder = path

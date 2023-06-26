@@ -31,7 +31,7 @@ const availablePlugins = [
 ];
 // eslint-disable-next-line no-unused-expressions
 yargs_1.default
-    .scriptName('npm run ts-migrate-extra --')
+    .scriptName('npm run ts-migrate-extraz --')
     .version(false)
     .usage('Usage: $0 <command> [options]')
     .command('init <folder>', 'Initialize tsconfig.json file in <folder>', (cmd) => cmd.positional('folder', { type: 'string' }).require(['folder']), (args) => {
