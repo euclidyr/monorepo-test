@@ -8,7 +8,7 @@ async function scanFilesAndReplaceImportExportWords(
 ): Promise<void> {
   const importExportToSearchArr: RegExp[] = [
     /const ([\w#\{\}\s\,]+) = require\(((\"|\')[^;]+(\"|\'))\);/g,
-    /const ([\w#\{\}\s\,]+) = require\(((\"|\')[^;]+(\"|\'))\)\.([\w#]+);/g,
+    /const ([\w#]+) = require\(((\"|\')[^;]+(\"|\'))\)\.([\w#]+);/g,
     /require\(((\"|\')([^;\'\"]+)(\"|\'))\)\.([\w#]+)\(\)/g,
     /module.exports =([^{}]+);/s,
     /module.exports =([\s\t\r\n]*)\{(.+)\}/s,
