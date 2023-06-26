@@ -58,7 +58,7 @@
     "jest": "26.6.3",
     "react": "^16.12.0"
   },
-  "gitHead": "7de041cf23f38136ba2ca27bced2eca291cd3ee6",
+  "gitHead": "f9dce874900d53739410247471fd29e0a15101b4",
   "peerDependencies": {
     "typescript": "^5.1.3"
   }
