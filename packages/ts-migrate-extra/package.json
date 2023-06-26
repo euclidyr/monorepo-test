@@ -1,6 +1,6 @@
 {
   "name": "ts-migrate-extraz",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A tool for migrating frontend application from JavaScript to TypeScript",
   "directories": {
     "test": "tests"
