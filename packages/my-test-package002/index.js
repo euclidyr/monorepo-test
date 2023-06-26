@@ -1,5 +1,5 @@
 function isGook(string) {
-  return string === "GOOK";
+  return string === "GOOKz";
 }
 
 module.exports = isGook;
