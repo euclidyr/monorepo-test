@@ -11,5 +11,9 @@
   "dependencies": {
     "rimraf": "^5.0.1"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "gitHead": "6905f78d8534f363c0774eab716133678dee4064"
 }
