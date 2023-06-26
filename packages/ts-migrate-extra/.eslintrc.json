@@ -1,0 +1,20 @@
+{
+    "rules": {
+       "linebreak-style": "off",
+       "@typescript-eslint/no-inferrable-types": "off",
+       "prettier/prettier": [
+        "error",
+        {
+            "endOfLine": "auto",
+            "singleQuote": true
+        }
+      ],
+      "comma-dangle": ["error", "never"],
+      "trailingComma": "none",
+      "extends": ["airbnb-base", "plugin:prettier/recommended"],
+      "plugins": ["no-only-tests"],
+      "no-only-tests/no-only-tests": 2,
+      "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
+    }
+  }
+  
