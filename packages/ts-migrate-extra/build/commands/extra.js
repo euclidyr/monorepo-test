@@ -34,7 +34,7 @@ const strip_comments_1 = __importDefault(require("strip-comments"));
 async function scanFilesAndReplaceImportExportWords(directoryPath) {
     const importExportToSearchArr = [
         /const ([\w#\{\}\s\,]+) = require\(((\"|\')[^;]+(\"|\'))\);/g,
-        /const ([\w#\{\}\s\,]+) = require\(((\"|\')[^;]+(\"|\'))\)\.([\w#]+);/g,
+        /const ([\w#]+) = require\(((\"|\')[^;]+(\"|\'))\)\.([\w#]+);/g,
         /require\(((\"|\')([^;\'\"]+)(\"|\'))\)\.([\w#]+)\(\)/g,
         /module.exports =([^{}]+);/s,
         /module.exports =([\s\t\r\n]*)\{(.+)\}/s,
