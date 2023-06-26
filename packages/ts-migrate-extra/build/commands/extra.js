@@ -42,7 +42,7 @@ async function scanFilesAndReplaceImportExportWords(directoryPath) {
     ];
     const replacementImportExportArr = [
         "import $1 from $2;",
-        "import { $3 } from $2;",
+        "import { $5 as $1 } from $2;",
         "import $3 from $1;\n$3.$5()",
         "export default $1;",
         "export { $2 }",
@@ -51,8 +51,8 @@ async function scanFilesAndReplaceImportExportWords(directoryPath) {
     const files = await fs.promises.readdir(directoryPath);
     for (const file of files) {
         const filePath = path.join(directoryPath, file);
-        if (filePath.includes('node_modules') || filePath.includes('migrations') || filePath.includes('tests')) {
-            continue; // Skip processing folder 'node_modules', 'migrations', 'tests'
+        if (filePath.includes('node_modules') || filePath.includes('migrations') || filePath.includes("seeders") || filePath.includes('tests')) {
+            continue; // Skip processing folder 'node_modules', 'migrations', 'seeders', 'tests'
         }
         const stats = await fs.promises.stat(filePath);
         if (stats.isDirectory()) {
