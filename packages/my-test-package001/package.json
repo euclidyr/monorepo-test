@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "rimraf": "^5.0.1"
-  }
+  },
+  "gitHead": "06e2234346fa4a30fa14fbb684287186d585d931"
 }

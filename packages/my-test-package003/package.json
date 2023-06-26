@@ -4,7 +4,7 @@
   "description": "> TODO: description",
   "author": "Nonthakit Sivaratanatamrong <NonthakitS@arv.co.th>",
   "homepage": "https://github.com/euclidyr/monorepo-test#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/student.js",
   "typings": "lib/student.d.ts",
   "directories": {
@@ -26,5 +26,6 @@
   },
   "bugs": {
     "url": "https://github.com/euclidyr/monorepo-test/issues"
-  }
+  },
+  "gitHead": "06e2234346fa4a30fa14fbb684287186d585d931"
 }
