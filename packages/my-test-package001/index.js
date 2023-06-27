@@ -1,5 +1,5 @@
 function isWds(string) {
-  return string === "WDSzzz66555";
+  return string === "WDSzzz665545";
 }
 
 module.exports = isWds;
