@@ -1,6 +1,6 @@
 {
   "name": "@euclidyr/ts-migrate-extra",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A tool for migrating frontend application from JavaScript to TypeScript",
   "directories": {
     "test": "tests"
