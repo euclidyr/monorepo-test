@@ -5,7 +5,7 @@ set -e
 frontend_folder=$1
 folder_name=`basename $1`
 CLI_DIR=$(dirname "$0")
-cli="./node_modules/ts-migrate-extraz/build/cli.js"
+cli="./build/cli.js"
 step_i=1
 step_count=5
 tsc_path="./node_modules/.bin/tsc"
@@ -13,7 +13,7 @@ should_remove_eslintrc=false
 additional_args="${@:2}"
 
 
-echo "Welcome to TS Migrate! :X
+echo "Welcome to TS Migrate! :Y
 
 This script will migrate a frontend folder to a compiling (or almost compiling) TS project.
 
@@ -24,8 +24,8 @@ It is recommended that you take the following steps before continuing...
    Check in or stash your changes, then re-run this script.
 
 2. Check out a new branch for the migration.
-   For example, \`git checkout -b $(whoami)--ts-migrate-extraz\` if you're migrating several folders or
-   \`git checkout -b $(whoami)--ts-migrate-extraz-$folder_name\` if you're just migrating $frontend_folder.
+   For example, \`git checkout -b $(whoami)--ts-migrate-extra\` if you're migrating several folders or
+   \`git checkout -b $(whoami)--ts-migrate-extra-$folder_name\` if you're just migrating $frontend_folder.
 
 3. Make sure you're on the latest, clean master.
    \`git fetch origin master && git reset --hard origin/master\`
@@ -72,7 +72,7 @@ if ! stat -t $frontend_folder/.eslintrc.* >/dev/null 2>&1; then
   should_remove_eslintrc=true
 fi
 
-maybe_commit -m "[ts-migrate-extraz][$folder_name] Init tsconfig.json file" -m 'Co-authored-by: ts-migrate <>'
+maybe_commit -m "[ts-migrate-extra][$folder_name] Init tsconfig.json file" -m 'Co-authored-by: ts-migrate <>'
 
 echo "
 [Step $((step_i++)) of ${step_count}] Modifying import, export, static functions......
@@ -82,14 +82,14 @@ npx prettier $frontend_folder --write
 
 $cli extra $frontend_folder
 
-maybe_commit -m "[ts-migrate-extraz][$folder_name] Modifying import, export, static functions" -m 'Co-authored-by: ts-migrate <>'
+maybe_commit -m "[ts-migrate-extra][$folder_name] Modifying import, export, static functions" -m 'Co-authored-by: ts-migrate <>'
 
 echo "
 [Step $((step_i++)) of ${step_count}] Renaming files from JS/JSX to TS/TSX and updating project.json\...
 "
 $cli rename $frontend_folder $additional_args
 
-maybe_commit -m "[ts-migrate-extraz][$folder_name] Rename files from JS/JSX to TS/TSX" -m 'Co-authored-by: ts-migrate <>'
+maybe_commit -m "[ts-migrate-extra][$folder_name] Rename files from JS/JSX to TS/TSX" -m 'Co-authored-by: ts-migrate <>'
 
 echo "
 [Step $((step_i++)) of ${step_count}] Fixing TypeScript errors...
@@ -100,7 +100,7 @@ if [ "$should_remove_eslintrc" = "true" ]; then
   rm -f $frontend_folder/.eslintrc
 fi
 
-maybe_commit -m "[ts-migrate-extraz][$folder_name] Run TS Migrate" -m 'Co-authored-by: ts-migrate <>'
+maybe_commit -m "[ts-migrate-extra][$folder_name] Run TS Migrate" -m 'Co-authored-by: ts-migrate <>'
 
 
 echo "
