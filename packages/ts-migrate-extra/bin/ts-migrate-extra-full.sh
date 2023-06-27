@@ -5,7 +5,7 @@ set -e
 frontend_folder=$1
 folder_name=`basename $1`
 CLI_DIR=$(dirname "$0")
-cli="./node_modules/ts-migrate-extra/build/cli.js"
+cli="./node_modules/@euclidyr/ts-migrate-extra/build/cli.js"
 step_i=1
 step_count=5
 tsc_path="./node_modules/.bin/tsc"
