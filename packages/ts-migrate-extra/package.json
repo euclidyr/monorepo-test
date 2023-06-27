@@ -7,7 +7,7 @@
   },
   "bin": {
     "@euclidyr/ts-migrate-extra": "build/cli.js",
-    "@euclidyr/ts-migrate-extra-full": "bin/@euclidyr/ts-migrate-extra-full.sh"
+    "@euclidyr/ts-migrate-extra-full": "bin/ts-migrate-extra-full.sh"
   },
   "keywords": [
     "ts-migrate",
